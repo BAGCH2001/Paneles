@@ -7,8 +7,8 @@ export const Approuter = () => {
     <>
         <Routes>
             <Route path="/" element={ <Inicio /> } />
-            <Route path="inicio" element={ <Inicio /> } />
-            <Route path="panel" element={ <PanelAn /> } />
+            <Route path="inicio" element={ <Inicio /> }/>
+            <Route path="panel" element={ <PanelAn /> }/>
         </Routes>
     </>
   )
