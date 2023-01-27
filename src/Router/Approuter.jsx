@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom"
 import {Inicio} from "../Public/Inicio"
 import { PanelAn } from "../Auth/PanelAn"
-
 export const Approuter = () => {
   return (
     <>
