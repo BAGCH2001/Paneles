@@ -20,11 +20,11 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
 import {Usuario} from '../components/Usuario';
-import { AnuCard } from '../components/AnuCard';
+import {Anuncios} from '../Formularios/Anuncios';
 
 const drawerWidth = 240;
 
-export const PanelAn = (props) => {
+export const AddAnu = (props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -131,13 +131,13 @@ export const PanelAn = (props) => {
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
-       <AnuCard/>
+       <Anuncios/>
       </Box>
     </Box>
   );
 }
 
-PanelAn.propTypes = {
+AddAnu.propTypes = {
 
   window: PropTypes.func,
 };
