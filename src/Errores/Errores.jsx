@@ -13,7 +13,7 @@ const Errores = () => {
           
 
           <div className="m-auto col-span-2 text-center justify-center">
-            <h1 className="text-8xl font-bold text-white">404</h1>
+            <h1 className="text-8xl font-bold text-white">404</h1>bhjjvgjvg
             <p className="text-white">No hay ruta pa' allá mi chavo</p>
           </div>
         </div>
