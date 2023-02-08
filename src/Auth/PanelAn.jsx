@@ -1,143 +1,100 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import StoreIcon from '@mui/icons-material/Store';
-import AddBusinessIcon from '@mui/icons-material/AddBusiness';
-import FeedIcon from '@mui/icons-material/Feed';
-import PostAddIcon from '@mui/icons-material/PostAdd';
-import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+import React from 'react'
+import { Link } from 'react-router-dom';
 
-import {Usuario} from '../components/Usuario';
-import { AnuCard } from '../components/AnuCard';
 
-const drawerWidth = 240;
+export const PanelAn = () => {
+    return (
+        <div class="flex font-sans">
+            <div class="flex-none w-64 h-screen relative border-2 border-r-gray-300 border-l-none">
+                <div class="flex-1 flex-col  ...">
+                    <div ><img className="w-auto h-auto" src="https://i.ibb.co/sK4fDQm/image-5.png" alt="" /></div>
+                    <div class="rounded-full ...">
+                        <img src="" alt="" />
+                    </div>
+                    <hr />
+                    <div className='bg-[#]'>
+                        <p className='font-bold text-center'>Usuario</p>
+                        <p className='underline underline-offset-1 text-center'>correo@gmail.com</p>
+                        <p className='font-bold text-center'>Publicaciones</p>
+                    </div>
+                    <hr />
+                    {/*<div className="flex mx-auto">
+                        <Link to="../inicio" className="btn btn-ghost normal-case text-  text-[#FFFFFF]" >inicio</Link>
+                    </div> si jala pero no sabemos como cargarlo en otro lado
+                    */}
+                    <div class="grid grid-cols-1 divide-y text-center border-gray-400">
+                    <div className="flex mx-auto">
+                        <Link to="../inicio" className="btn btn-ghost normal-case text-  text-[#FFFFFF]" >inicio</Link>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <form class="flex-auto p-6">
+                <div class="flex flex-wrap">
+                    <h1 class="flex-auto text-lg font-semibold text-slate-900">
+                        Classic Utility Jacket
+                    </h1>
+                    <div class="text-lg font-semibold text-slate-500">
+                        $110.00
+                    </div>
+                    <div class="w-full flex-none text-sm font-medium text-slate-700 mt-2">
+                        In stock
+                    </div>
+                </div>
+                <div class="flex items-baseline mt-4 mb-6 pb-6 border-b border-slate-200">
+                    <div class="space-x-2 flex text-sm">
+                        <label>
+                            <input class="sr-only peer" name="size" type="radio" value="xs" checked />
+                            <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+                                XS
+                            </div>
+                        </label>
+                        <label>
+                            <input class="sr-only peer" name="size" type="radio" value="s" />
+                            <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+                                S
+                            </div>
+                        </label>
+                        <label>
+                            <input class="sr-only peer" name="size" type="radio" value="m" />
+                            <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+                                M
+                            </div>
+                        </label>
+                        <label>
+                            <input class="sr-only peer" name="size" type="radio" value="l" />
+                            <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+                                L
+                            </div>
+                        </label>
+                        <label>
+                            <input class="sr-only peer" name="size" type="radio" value="xl" />
+                            <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+                                XL
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="flex space-x-4 mb-6 text-sm font-medium">
+                    <div class="flex-auto flex space-x-4">
+                        <button class="h-10 px-6 font-semibold rounded-md bg-black text-white" type="submit">
+                            Buy now
+                        </button>
+                        <button class="h-10 px-6 font-semibold rounded-md border border-slate-200 text-slate-900" type="button">
+                            Add to bag
+                        </button>
+                    </div>
+                    <button class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200" type="button" aria-label="Like">
+                        <svg width="20" height="20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
+                        </svg>
+                    </button>
+                </div>
+                <p class="text-sm text-slate-700">
+                    Free shipping on all continental US orders.
+                </p>
+            </form>
+        </div>
 
-export const PanelAn = (props) => {
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-
-  const drawer = (
-    <div>
-      <Toolbar />
-      <Divider />
-      <List> <Usuario/> </List>
-      <Divider/>
-      <List>
-       {['Crear negocio', 'Negocios'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <AddBusinessIcon />:<StoreIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-      {['Crear anucnio', 'Anuncios'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <PostAddIcon /> : <FeedIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </div>
-  );
-
-  const container = window !== undefined ? () => window().document.body : undefined;
-
-  return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <AppBar
-        position="fixed"
-        color=""
-        sx={{
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
-          ml: { sm: `${drawerWidth}px` },
-        }}
-      >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Xidoo Rutas
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <Box
-        component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-        aria-label="mailbox folders"
-      >
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-        >
-          {drawer}
-        </Drawer>
-        <Drawer
-          variant="permanent"
-          sx={{
-            display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-          open
-        >
-          {drawer}
-        </Drawer>
-      </Box>
-      <Box
-        component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
-      >
-        <Toolbar />
-       <AnuCard/>
-      </Box>
-    </Box>
-  );
+    )
 }
-
-PanelAn.propTypes = {
-
-  window: PropTypes.func,
-};
