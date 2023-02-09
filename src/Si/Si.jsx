@@ -9,7 +9,7 @@ export default function ImgMediaCard() {
     return (
         <Card sx={{ maxWidth: 345 }}>
             <Stack>
-                <Avatar alt="usuario" src="https://www.publimetro.com.mx/resizer/-dPq5DOyDyT9vBXJk8Qk_HC_nwg=/1024x1024/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/7H2WEUR6WRG6TF3WFDHGB5W7CI.jpg" sx={{ width: 80, height: 80, }} />
+                <Avatar alt="usuario" src="https://img2.rtve.es/imagenes/experimento-monos-virtuales-consigue-reescribir-obras-completas-shakespeare/1317125517644.jpg" sx={{ width: 80, height: 80, }} />
             </Stack>
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
