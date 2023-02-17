@@ -18,6 +18,7 @@ export const AnuCard = () => {
       sx={{
         p: 2,
         margin: 'auto',
+        mb:5,
         maxWidth: 800,
         flexGrow: 1,
         backgroundColor: (theme) =>
