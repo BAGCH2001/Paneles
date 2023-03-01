@@ -1,6 +1,13 @@
 import * as React from 'react';
+import { useState } from "react";
+
 
 export const Negocios = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
   return (
 
     <div class="flex flex-row">
@@ -34,83 +41,59 @@ export const Negocios = () => {
           </div>
         </div>
       </div>
-      <div class="flex-1 w-1/3 h-14 mx-2">
+      <div class="flex-1 w-1/3 h-full mx-2">
         <div className='mb-4 flex-col'>
           <textarea className="textarea textarea-bordered w-full h-36 border-solid border-2 border-gray-300 text-lg rounded-lg" placeholder="Bio"></textarea>
         </div>
-        <div>
-          <div class="flex flex-col ...">
-            <div>
-              <div class="flex flex-row...">
-                <div className='mx-2'>Dias</div>
-                <div className='mx-2'>Apertura</div>
-                <div className='mx-2'>Cierre</div>
-              </div>
+        {/* */}
+        <div className="relative inline-block w-full">
+      <div>
+        <button
+          type="button"
+          className="inline-flex  w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          onClick={toggleDropdown}
+          id="options-menu"
+          aria-haspopup="true"
+          aria-expanded={isOpen ? "true" : "false"}
+        >
+          <span className='text-center'>Horarios de apertura y cierre</span>
+          <svg
+            className="w-10 h-6 ml-full"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              fillRule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+      {isOpen && (
+        <div
+          className="origin-top-right absolute center-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+          role="menu"
+          aria-orientation="vertical"
+          aria-labelledby="options-menu"
+        >
+          <div className="py-1" role="none">
+            <div className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
+              Option 1
             </div>
-            <div>02</div>
-            <div>03</div>
-            <div>04</div>
-            <div>05</div>
-            <div>06</div>
-            <div>07</div>
-            <div>08</div>
-            <div>09</div>
+            <div className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
+              Option 2
+            </div>
+            <div className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
+              Option 3
+            </div>
           </div>
-          {/* <table class="w-2 flex-1">
-          <thead>
-            <tr>
-              <th>Días</th>
-              <th></th>
-              <th>Apertura</th>
-              <th>Cierre</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className='text-lg rounded-lg'>Lunes</td>
-              <td> <input type="checkbox" value="" id='' className='ml-2 mr-2'/> </td>
-              <td> <input className='border-solid border-2 border-gray-300' type="time" id="appt" name="appt" min="09:00" max="18:00" required/></td>
-              <td> <input className='border-solid border-2 border-gray-300' type="time" id="appt" name="appt" min="09:00" max="18:00" required/></td>
-            </tr>
-            <tr>
-              <td className='text-lg rounded-lg'>Martes</td>
-              <td> <input type="checkbox" value="" id='' className='ml-2 mr-2'/> </td>
-              <td> <input className='border-solid border-2 border-gray-300' type="time" id="appt" name="appt" min="09:00" max="18:00" required/></td>
-              <td> <input className='border-solid border-2 border-gray-300' type="time" id="appt" name="appt" min="09:00" max="18:00" required/></td>
-            </tr>
-            <tr>
-              <td className='text-lg rounded-lg'>Miercoles </td>
-              <td> <input type="checkbox" value="" id='' className='ml-2 mr-2'/> </td>
-              <td> <input className='border-solid border-2 border-gray-300' type="time" id="appt" name="appt" min="09:00" max="18:00" required/></td>
-              <td> <input className='border-solid border-2 border-gray-300' type="time" id="appt" name="appt" min="09:00" max="18:00" required/></td>
-            </tr>
-            <tr>
-              <td className='text-lg rounded-lg'>Jueves </td>
-              <td> <input type="checkbox" value="" id='' className='ml-2 mr-2'/> </td>
-              <td> <input className='border-solid border-2 border-gray-300' type="time" id="appt" name="appt" min="09:00" max="18:00" required/></td>
-              <td> <input className='border-solid border-2 border-gray-300' type="time" id="appt" name="appt" min="09:00" max="18:00" required/></td>
-            </tr>
-            <tr>
-              <td className='text-lg rounded-lg'>Viernes </td>
-              <td> <input type="checkbox" value="" id='' className='ml-2 mr-2'/> </td>
-              <td> <input className='border-solid border-2 border-gray-300' type="time" id="appt" name="appt" min="09:00" max="18:00" required/></td>
-              <td> <input className='border-solid border-2 border-gray-300' type="time" id="appt" name="appt" min="09:00" max="18:00" required/></td>
-            </tr>
-            <tr>
-              <td className='text-lg rounded-lg'>Sabado </td>
-              <td> <input type="checkbox" value="" id='' className='ml-2 mr-2'/> </td>
-              <td> <input className='border-solid border-2 border-gray-300' type="time" id="appt" name="appt" min="09:00" max="18:00" required/></td>
-              <td> <input className='border-solid border-2 border-gray-300' type="time" id="appt" name="appt" min="09:00" max="18:00" required/></td>
-            </tr>
-            <tr>
-              <td className='text-lg rounded-lg'>Domingo </td>
-              <td> <input type="checkbox" value="" id='' className='ml-2 mr-2'/> </td>
-              <td> <input className='border-solid border-2 border-gray-300' type="time" id="appt" name="appt" min="09:00" max="18:00" required/></td>
-              <td> <input className='border-solid border-2 border-gray-300' type="time" id="appt" name="appt" min="09:00" max="18:00" required/></td>
-            </tr>
-          </tbody>
-        </table>   */}
         </div>
+      )}
+    </div>
+        {/* */}
       </div>
       <div class="flex-1 w-1/3 h-14">
         <div className='flex-col'>
