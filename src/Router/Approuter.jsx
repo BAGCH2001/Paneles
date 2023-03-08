@@ -4,6 +4,7 @@ import { PanelAn } from "../Auth/PanelAn"
 import { PanelCo } from "../Auth/PanelCo"
 import { AddCom } from "../Auth/AddCom"
 import { AddAnu } from "../Auth/AddAnu"
+import { Registro } from "../Formularios/Registro"
 
 export const Approuter = () => {
   return (
@@ -15,6 +16,7 @@ export const Approuter = () => {
             <Route path="comercios" element={ <PanelCo /> }/>
             <Route path="addcom" element={<AddCom/>}/>
             <Route path="addanu" element={<AddAnu/>}/>
+            <Route path="registro" element={<Registro/>}/>
         </Routes>
     </>
   )
