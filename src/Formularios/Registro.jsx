@@ -1,5 +1,12 @@
-import React from 'react'
+import { checkReg } from '../modal/modals'
+
 export const Registro = () => {
+
+    const registroValidator = (e) =>{
+        e.preventDefault()
+        checkReg()
+    }
+
     return (
         <div class=" place-content-center m-10 flex">
             <div class="place-content-center">
@@ -87,9 +94,13 @@ export const Registro = () => {
                         </div>
                     </div>
                     <div>
-                        <button class="w- font-bold  bg-yellow-400 w-full p-2 mb-5 text-white rounded-lg hover:bg-yellow-500 cursor-pointer transition-all">
-                        Registrarse
-                        </button>
+                        <input 
+                        type="submit" 
+                        value={"Registrarse"}
+                        class="w- font-bold  bg-yellow-400 w-full p-2 mb-5 text-white rounded-lg hover:bg-yellow-500 cursor-pointer transition-all"
+                        onClick={registroValidator}
+                        >
+                        </input>
                     </div>
                 </div>
             </form>

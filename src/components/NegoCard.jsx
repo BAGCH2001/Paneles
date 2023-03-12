@@ -1,28 +1,20 @@
 import * as React from "react";
+import { CrateAnmuCom } from "../modal/modals";
 import CardComm from "./CardComm";
 
 export const NegoCard = () => {
+
+  const newcreate = (e) =>{
+    e.preventDefault()
+    CrateAnmuCom()
+  }
+
   return (
     <div className="">
       <section>
         <header class="bg-white space-y-4 p-4 sm:px-8 sm:py-6 lg:p-4 xl:px-8 xl:py-6">
           <div class="flex items-center justify-between">
-            <h2 class="font-semibold text-slate-900">Projects</h2>
-            <a
-              href="/"
-              class="hover:bg-blue-400 group flex items-center rounded-md bg-blue-500 text-white text-sm font-medium pl-2 pr-3 py-2 shadow-sm"
-            >
-              <svg
-                width="20"
-                height="20"
-                fill="currentColor"
-                class="mr-2"
-                aria-hidden="true"
-              >
-                <path d="M10 5a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3H6a1 1 0 1 1 0-2h3V6a1 1 0 0 1 1-1Z" />
-              </svg>
-              New
-            </a>
+            <h2 class="font-semibold text-slate-900">poner nombre adecuado xd</h2>
           </div>
           <form class="group relative">
             <svg
@@ -41,8 +33,8 @@ export const NegoCard = () => {
             <input
               class="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-10 ring-1 ring-slate-200 shadow-sm"
               type="text"
-              aria-label="Filter projects"
-              placeholder="Filter projects..."
+              aria-label="Buscar"
+              placeholder="Buscar..."
             />
           </form>
         </header>
@@ -55,12 +47,25 @@ export const NegoCard = () => {
           <CardComm/>
           <CardComm/>
           <CardComm/>
+          <CardComm/>
+          <CardComm/>
+          <CardComm/>
+          <CardComm/>
+          <CardComm/>
+          <CardComm/>
+          <CardComm/>
+          <CardComm/>
+          <CardComm/>
+          <CardComm/>
+          <CardComm/>
+          <CardComm/>
         </li>
 
           <li class="flex">
-            <a
+            <button
               href="#"
               class="hover:border-blue-500 hover:border-solid hover:bg-white hover:text-blue-500 group w-full flex flex-col items-center justify-center rounded-md border-2 border-dashed border-slate-300 text-sm leading-6 text-slate-900 font-medium py-3"
+              onClick={newcreate}
             >
               <svg
                 class="group-hover:text-blue-500 mb-1 text-slate-400"
@@ -68,11 +73,12 @@ export const NegoCard = () => {
                 height="20"
                 fill="currentColor"
                 aria-hidden="true"
+
               >
                 <path d="M10 5a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3H6a1 1 0 1 1 0-2h3V6a1 1 0 0 1 1-1Z" />
               </svg>
-              New project
-            </a>
+              Crear nuevo [ Comercio / Anuncio ] 
+            </button>
           </li> 
         </ul>
       
