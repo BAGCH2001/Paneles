@@ -1,4 +1,3 @@
-import CardComm from "../components/CardComm";
 import Swal from "sweetalert2"
 
 export const validateFormLogin = () => {
