@@ -43,19 +43,7 @@ export const NegoCard = () => {
     <ul className="bg-slate-50 p-4 sm:px-8 sm:pt-6 sm:pb-8 lg:p-4 xl:px-8 xl:pt-6 xl:pb-8
         gap-2 text-sm leading-6">
 
-        <li x-for="project in projects">
-          <CardComm/>
-          <CardComm/>
-          <CardComm/>
-          <CardComm/>
-          <CardComm/>
-          <CardComm/>
-          <CardComm/>
-          <CardComm/>
-          <CardComm/>
-          <CardComm/>
-          <CardComm/>
-          <CardComm/>
+        <li x-for="project in projects" className="grid grid-cols-2 mb-6">
           <CardComm/>
           <CardComm/>
           <CardComm/>

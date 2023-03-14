@@ -4,7 +4,7 @@ export const validateFormLogin = () => {
     Swal.fire({
         icon: 'error',
         title: 'Es necesario rellenar todos los campos',
-        text: 'Intentelo de nuevo',
+        footer: 'Verifica los campos',
         showConfirmButton: false,
         timer: 2500
       })
@@ -41,13 +41,28 @@ export const CrateAnmuCom = () =>{
             window.open('addanu', '_blank');
         }
     })
+    // footer:
 }
 
-
-export const showcard = () =>{
-    Swal.fire({
-        backdrop: false
-    })
+export const showcard = () => {
+  Swal.fire({
+    title: 'Información del negocio',
+    showConfirmButton: false,
+    showCloseButton: true,
+    showCancelButton: true,
+    confirmButtonText: 'Editar',
+    cancelButtonText: 'Editar',
+    closeButtonText: 'Editar',
+    html: `
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+          <div style="margin-right: 20px;">
+            <h2>Título del negocio</h2>
+            <p>Descripción del negocio</p>
+          </div>
+          <img style="width: 50%; height: auto;" src="https://avatars.githubusercontent.com/u/92775533?v=4" alt="Imagen del negocio" />
+        </div>
+      </div>
+    `
+  });
 }
-
-

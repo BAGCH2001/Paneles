@@ -55,11 +55,11 @@ export const Inicio = () => {
           </div>
 
           <div className="grid place-content-center">
-            <input
-              type=""
-              className="text-center font-bold bg-gray-300 w-full p-2 mt-8 text-white rounded-lg hover: cursor-pointer transition-all"
-              value={"Crear cuenta"}
-            />
+            <a 
+            className="text-center font-bold bg-gray-300 w-44 p-2 mt-8 text-white rounded-lg hover: cursor-pointer transition-all"
+            href="Registro">
+              Crear cuenta
+            </a>
           </div>
         </form>
       </div>
