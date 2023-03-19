@@ -19,12 +19,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
-import {Usuario} from '../components/Usuario';
-import { Negocios } from '../Formularios/Negocios';
+import {Usuario} from '../../components/Usuario';
+import {Anuncios} from '../../components/Formularios/Anuncios';
 
 const drawerWidth = 240;
 
-export const AddCom = (props) => {
+export const AddAnu = (props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -131,13 +131,13 @@ export const AddCom = (props) => {
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
-       <Negocios/>
+       <Anuncios/>
       </Box>
     </Box>
   );
 }
 
-AddCom.propTypes = {
+AddAnu.propTypes = {
 
   window: PropTypes.func,
 };

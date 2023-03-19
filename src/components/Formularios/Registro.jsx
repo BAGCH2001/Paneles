@@ -1,4 +1,4 @@
-import { checkReg } from '../modal/modals'
+import { checkReg } from '../../components/modal/modals'
 
 export const Registro = () => {
 

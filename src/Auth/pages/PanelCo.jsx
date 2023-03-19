@@ -6,25 +6,31 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
+// import InboxIcon from '@mui/icons-material/MoveToInbox';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import StoreIcon from '@mui/icons-material/Store';
-import AddBusinessIcon from '@mui/icons-material/AddBusiness';
-import FeedIcon from '@mui/icons-material/Feed';
-import PostAddIcon from '@mui/icons-material/PostAdd';
+// import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
-import {Usuario} from '../components/Usuario';
-import {Anuncios} from '../Formularios/Anuncios';
+// Comercio
+import StoreIcon from '@mui/icons-material/Store';
+import AddBusinessIcon from '@mui/icons-material/AddBusiness';
+
+// Anuncio
+import FeedIcon from '@mui/icons-material/Feed';
+import PostAddIcon from '@mui/icons-material/PostAdd';
+
+import {Usuario} from '../../components/Usuario';
+import {NegoCard} from '../../components/NegoCard';
 
 const drawerWidth = 240;
 
-export const AddAnu = (props) => {
+export const PanelCo = (props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -39,11 +45,11 @@ export const AddAnu = (props) => {
       <List> <Usuario/> </List>
       <Divider/>
       <List>
-       {['Crear negocio', 'Negocios'].map((text, index) => (
+        {['Crear negocio', 'Negocios'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <AddBusinessIcon />:<StoreIcon />}
+                {index % 2 === 0 ? <AddBusinessIcon />:<StoreIcon /> }
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -52,8 +58,8 @@ export const AddAnu = (props) => {
       </List>
       <Divider />
       <List>
-      {['Crear anucnio', 'Anuncios'].map((text, index) => (
-            <ListItem key={text} disablePadding>
+        {['Crear anucnio', 'Anuncios'].map((text, index) => (
+          <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
                 {index % 2 === 0 ? <PostAddIcon /> : <FeedIcon />}
@@ -131,13 +137,13 @@ export const AddAnu = (props) => {
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
-       <Anuncios/>
+        <NegoCard/>
       </Box>
     </Box>
   );
 }
 
-AddAnu.propTypes = {
+PanelCo.propTypes = {
 
   window: PropTypes.func,
 };

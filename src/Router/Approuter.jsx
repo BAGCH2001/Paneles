@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom"
 import {Inicio} from "../Public/Inicio"
-import { PanelAn } from "../Auth/PanelAn"
-import { PanelCo } from "../Auth/PanelCo"
-import { AddCom } from "../Auth/AddCom"
-import { AddAnu } from "../Auth/AddAnu"
-import { Registro } from "../Formularios/Registro"
+import { PanelAn } from "../Auth/pages/PanelAn"
+import { PanelCo } from "../Auth/pages/PanelCo"
+import { AddCom } from "../Auth/pages/AddCom"
+import { AddAnu } from "../Auth/pages/AddAnu"
+import { Registro } from "../components/Formularios/Registro"
 
 export const Approuter = () => {
   return (

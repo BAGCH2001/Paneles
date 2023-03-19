@@ -1,4 +1,4 @@
-import { validateFormLogin } from "../modal/modals";
+import { validateFormLogin } from "../components/modal/modals";
 
 export const Inicio = () => {
 

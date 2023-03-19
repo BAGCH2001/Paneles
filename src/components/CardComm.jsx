@@ -1,5 +1,5 @@
 import React from 'react';
-import { showcard } from '../modal/modals';
+import { showcard } from '../components/modal/modals';
 
 const CardComm = () => {
 
